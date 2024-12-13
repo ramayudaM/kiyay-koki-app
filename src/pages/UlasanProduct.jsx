@@ -1,11 +1,11 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useParams } from "react-router-dom";
 import { product } from "../data/data"; 
 import { FaStar, FaRegStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Ulasan = () => {
-    const { id } = useParams();
+  const { id } = useParams();
   const selectedProduct = product.find((item) => item.id === parseInt(id));
 
   const renderStars = (count) => {
@@ -13,6 +13,10 @@ const Ulasan = () => {
       i < count ? <FaStar key={i} color="gold" /> : <FaRegStar key={i} color="gray" />
     );
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   if (!selectedProduct) {
     return <h2>Product not found</h2>;
@@ -29,7 +33,8 @@ const Ulasan = () => {
               <span style={{ fontWeight: "bold", marginLeft: "20px"}}>ULASAN</span>
               </Link>
       </div>
-      <div style={{display: "flex"}}>
+
+      <div style={{display: "flex", marginTop: "10px"}}>
 
       <div className="detailImage">
         <img src={selectedProduct.image} alt="product alt" 
@@ -51,6 +56,7 @@ const Ulasan = () => {
       </div>
 
 
+      {/* isi deksripsi box */}
       <div className="deskripsi-box" 
       style={{
         width: "800px",

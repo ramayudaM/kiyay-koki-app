@@ -12,7 +12,7 @@ const ProductCard = (props) => {
   };
 
   return (
-    <Link to={`/product/${props.id}`} style={{ textDecoration: "none", color: "inherit" }}>
+    <Link to={`/product/${props.id}`} style={{ textDecoration: "none", color: "inherit"}}>
     <div className="ProductCard">
       <Card style={{ width: "16rem", background: "none", margin: "auto" }}>
         <Card.Img variant="top" src={props.image} alt="product alt" />

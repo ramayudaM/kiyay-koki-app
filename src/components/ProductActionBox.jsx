@@ -21,11 +21,13 @@ const ProductActionBox = ({ onAddToCart, onAddToWishlist, stock }) => {
         marginLeft: "20px",
         borderRadius: "8px", 
         backgroundColor: "#fff" }}>
+
       <p style={{
         fontWeight: "Bold",
         textAlign: "center",
         marginTop: "20px"
       }}>Quantity</p>
+      
       <div className="card-keranjang jumlah-product">            
         <button className="button" onClick={decrement}>
         -

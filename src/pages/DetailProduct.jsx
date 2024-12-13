@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { product } from "../data/data"; 
 import { FaStar, FaRegStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap"
 import ProductActionBox from "../components/ProductActionBox";
 
 const DetailProduct = () => {
@@ -26,6 +27,7 @@ const DetailProduct = () => {
   return (
     <div className="main-bg">
       
+      {/* LINK: DETAIL DAN ULASAN */}
       <div className="linking d-flex" style={{marginLeft: "460px", marginTop: "5rem", marginBottom: "-5rem" }}>
         <Link to={`/product/${selectedProduct.id}`} style={{ textDecoration: "none", color: "inherit" }}>
         <span style={{ fontWeight: "bold"}}>DETAIL</span>
@@ -35,6 +37,8 @@ const DetailProduct = () => {
         </Link>
       </div>
 
+
+    {/* GAMBAR */}
     <div style={{display: "flex", marginTop: "10px"}}>
 
       <div className="detailImage">
@@ -47,7 +51,7 @@ const DetailProduct = () => {
           }} />
       </div>
 
-
+    {/* BOX DETAIL */}
       <div className="deskripsi-box" 
       style={{
         width: "500px",
@@ -58,6 +62,7 @@ const DetailProduct = () => {
         marginLeft: "20px"
       }}>
 
+      {/* ISI DETAIL */}
       <div className="deskripsi">
         <h1 
         style={{ fontWeight: "700", textAlign: "center" }}>
@@ -86,14 +91,23 @@ const DetailProduct = () => {
         <p 
         style={{ 
           whiteSpace: "pre-line", 
-          lineHeight: "1.8", 
+          lineHeight: "1.5", 
           marginLeft: "20px", 
           marginTop: "1rem"
           }}>{selectedProduct.deskripsi}</p>
       </div>
 
+      {/* ACTION BOX */}
       </div>
+      <div>
           <ProductActionBox/>
+         <div className="chat-button" style={{
+           marginTop: "20px",
+           marginLeft: "20px"
+          }}>
+            <Button style={{borderRadius: "0px"}}>CHAT</Button>
+          </div>
+        </div>
       </div>
     </div>
   );

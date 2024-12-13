@@ -28,7 +28,7 @@ const Navigasi = () => {
               src={logo}
               alt="Logo img"
               width="40"
-              height="40"
+              height="40" 
               className="mb-2 p-1"
             />
             KIYAY KOKI
@@ -39,9 +39,6 @@ const Navigasi = () => {
             </Nav.Link>
             <Nav.Link className="navStyle" as={Link} to="/contact">
               Contact
-            </Nav.Link>
-            <Nav.Link className="navStyle" as={Link} to="/About">
-              About
             </Nav.Link>
             <Nav.Link  className="navStyle" as={Link} to="/Login">
               Sign Up
