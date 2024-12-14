@@ -9,7 +9,7 @@ import {
   Col,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import logo from "../assets/images/icon/logo.png";
+import mainLogo from "../assets/images/icon/mainLogo1.png"
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../App.css";
 
@@ -25,11 +25,11 @@ const Navigasi = () => {
         <Container>
           <Navbar.Brand as={Link} to="/" style={{ fontWeight: "700" }}>
             <img
-              src={logo}
+              src={mainLogo}
               alt="Logo img"
-              width="40"
-              height="40" 
-              className="mb-2 p-1"
+              width="50"
+              height="50" 
+              className="p-1"
             />
             KIYAY KOKI
           </Navbar.Brand>

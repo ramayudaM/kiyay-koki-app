@@ -10,8 +10,43 @@ const Home = () => {
         <div >
           <Slider />
         </div>
+      <div style={{ marginTop: "4rem" }}>
+
+        <div className="promo-tag" style={{ display: "flex",}}>
+          <div className="rectangle" />
+          <span
+            style={{
+              fontWeight: "bold",
+              marginLeft: "20px",
+              marginTop: "10px",
+            }}
+            >
+            Today's
+          </span>
+      </div>
+
+        <h1 style={{ marginLeft: "20px" }}> PROMO TERBARU </h1>
         <ProductList product={product} />
+    </div>
+
+      <div style={{ marginTop: "4rem" }}>
+
+        <div className="promo-tag" style={{ display: "flex",}}>
+          <div className="rectangle" />
+          <span
+            style={{
+              fontWeight: "bold",
+              marginLeft: "20px",
+              marginTop: "10px",
+            }}
+            >
+            Today's
+          </span>
+      </div>
+
+        <h1 style={{ marginLeft: "20px" }}> Best Seller </h1>
         <ProductList product={product} />
+    </div>
       </div>
   );
 };
