@@ -1,9 +1,6 @@
 import React from "react";
 import baner1 from "../assets/images/banner/baner.jpg";
 import LoginForm from "../components/LoginForm";
-import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
-
 
 const Login = () => {
     return (
@@ -28,17 +25,7 @@ const Login = () => {
                 <div style={{marginLeft: "160px", marginTop: "60px"}}>
                 <LoginForm/>
                 </div>
-
-                <Link to={`/OtpPage`}>
-                <Button style={{
-                    marginLeft: "270px",
-                    marginTop: "100px",
-                    width: "150px",
-                    borderRadius: "30px",
-                    background: "#9984f5",
-                    border: "none"
-                }}>LOGIN</Button>
-                </Link>
+                
                 </div>
             </div>
 

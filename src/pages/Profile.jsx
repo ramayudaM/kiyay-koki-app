@@ -76,8 +76,9 @@ const Profile = () => {
                 <p
                 style={{ 
                     fontWeight: "100",
-                    marginLeft: "10px" }}>Jln Kebangsaan, gang merak No.26, Kedaton, Kota BandarLampung, Lampung.
-(rumah warna merah, tingkat dua, ada gambar ultramennya) </p>
+                    marginLeft: "10px" }}>
+                    Jln Kebangsaan, gang merak No.26, Kedaton, Kota BandarLampung, Lampung.
+                    (rumah warna merah, tingkat dua, ada gambar ultramennya) </p>
 
             </div>
 

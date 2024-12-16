@@ -31,12 +31,26 @@ const Contact = () => {
 
                     <p>0821-8473-4997</p>
                 </div>
-                
+
                 <div className="mail d-flex gap-2">
                 <i className="bi bi-envelope-fill"
                     style={{color:"rgb(113, 84, 241)"}}></i>
 
                     <p>KiyayKoki@gmail.com</p>
+                </div>
+                
+                <div className="mail d-flex gap-2">
+                <i className="bi bi-tiktok"
+                    style={{color:"rgb(113, 84, 241)"}}></i>
+
+                    <p>Kiyay Koki Lampung</p>
+                </div>
+
+                <div className="mail d-flex gap-2">
+                <i className="bi bi-instagram"
+                    style={{color:"rgb(113, 84, 241)"}}></i>
+
+                    <p>@kiyay_koki_lampung</p>
                 </div>
                 
                 </div>
@@ -63,7 +77,9 @@ const Contact = () => {
                     loading="lazy" 
                     referrerPolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-        </div>
+            </div>
+
+
                 <div className="d-flex" style={{marginTop: "100px"}}>
                     <img src={mainLogo} alt="main alt"
                     style={{ 

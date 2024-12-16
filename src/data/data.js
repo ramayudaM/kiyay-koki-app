@@ -63,7 +63,7 @@ export const product = [
   {
     id: 6,
     nama: "PUTRA",
-    newPrice: "Rp180.000",
+    newPrice: "Rp000.000",
     oldPrice: "Rp200.000",
     star: 5,
     image: product1,
