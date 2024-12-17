@@ -1,22 +1,24 @@
-import React from "react";
-import "../App.css";
-import ProductCard from "./ProductCard";
+import React from 'react';
+import '../App.css';
+import ProductCard from './ProductCard';
 
-const ProductList = ({ product }) => {
+const ProductList = ({ products }) => {
   return (
     <div>
       <div className="cards">
-        {product.map((product) => {
+        {products.map((product) => {
+          const newPrice = product.discount > 0 ? product.price - (product.price * product.discount) / 100 : product.price;
+
           return (
             <ProductCard
               key={product.id}
               id={product.id}
-              nama={product.nama}
-              newPrice={product.newPrice}
-              oldPrice={product.oldPrice}
-              star={product.star}
-              image={product.image}
-              jumlahUlasan={product.jumlahUlasan}
+              nama={product.name}
+              newPrice={newPrice}
+              oldPrice={product.price}
+              star={product.averageRating}
+              image={product.images[0].image_url}
+              jumlahUlasan={product.totalReviews}
             />
           );
         })}
