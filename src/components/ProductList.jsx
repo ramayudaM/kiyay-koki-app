@@ -4,25 +4,23 @@ import ProductCard from './ProductCard';
 
 const ProductList = ({ products }) => {
   return (
-    <div>
-      <div className="cards">
-        {products.map((product) => {
-          const newPrice = product.discount > 0 ? product.price - (product.price * product.discount) / 100 : product.price;
+    <div className="product-list">
+      {products.map((product) => {
+        const newPrice = product.discount > 0 ? product.price - (product.price * product.discount) / 100 : product.price;
 
-          return (
-            <ProductCard
-              key={product.id}
-              id={product.id}
-              nama={product.name}
-              newPrice={newPrice}
-              oldPrice={product.price}
-              star={product.averageRating}
-              image={product.images[0].image_url}
-              jumlahUlasan={product.totalReviews}
-            />
-          );
-        })}
-      </div>
+        return (
+          <ProductCard
+            key={product.id}
+            id={product.id}
+            nama={product.name}
+            newPrice={newPrice}
+            oldPrice={product.price}
+            star={product.averageRating}
+            image={product.images[0].image_url}
+            jumlahUlasan={product.totalReviews}
+          />
+        );
+      })}
     </div>
   );
 };

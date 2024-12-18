@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { Row, Col, Form, Button } from 'react-bootstrap';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { verifyOtp } from '../api/user'; // Fungsi API untuk verifikasi OTP
+import { useUserContext } from '../context/UserContext'; // Import UserContext
 
 const OtpForm = () => {
   const inputRefs = useRef([]);
@@ -9,6 +10,7 @@ const OtpForm = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
   const location = useLocation();
+  const { setTokenAPI } = useUserContext(); // Menggunakan fungsi login dari konteks
 
   const id = location.state?.data.id || '';
   const waNumber = location.state?.data.waNumber || '';
@@ -42,13 +44,20 @@ const OtpForm = () => {
   };
 
   const handleSubmit = async (otpCode) => {
-    const userId = id.toString();
-    const otpCodeStr = otpCode.toString();
+    // const userId = id.toString();
+    // const otpCodeStr = otpCode.toString();
     setError(''); // Reset error
     try {
-      const { data } = await verifyOtp(userId, waNumber, otpCodeStr);
+      const { data } = await verifyOtp(id, waNumber, otpCode);
+      setTokenAPI(data.token, data.role);
 
-      // navigate('/dashboard'); // Navigasi ke dashboard setelah sukses
+      if (data.role === 'buyer') {
+        navigate('/');
+      }
+
+      if (data.role === 'seller') {
+        navigate('/admin');
+      }
     } catch (error) {
       setError('OTP tidak valid. Silakan coba lagi.');
     }

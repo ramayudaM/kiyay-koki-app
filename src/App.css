@@ -182,4 +182,320 @@
   object-fit: cover; /* Menjaga proporsi gambar dengan memotong jika perlu */
 }
 
-/* page search result */
+/* Navigasi Styling */
+.navStyle {
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+/* Search Input dan Button dalam Satu Baris */
+.searchBar {
+  border-radius: 8px;
+}
+
+.searchButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1; /* Agar input mengambil sisa ruang */
+  border-radius: 8px;
+}
+
+/* Ikon Navigasi */
+.navIcon i {
+  font-size: 1.2rem;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.navIcon i:hover {
+  color: #495057;
+}
+
+.main-bg {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Product List Container */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+/* Product Card Container */
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-image-container {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.product-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.product-price {
+  color: red;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.product-old-price {
+  color: gray;
+  text-decoration: line-through;
+  font-size: 0.9rem;
+}
+
+.product-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.review-count {
+  color: gray;
+  font-size: 0.9rem;
+}
+
+/* Home Page Container */
+.home-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Promo Slider Section */
+.promo-slider {
+  margin-bottom: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.slider-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 16px 0;
+  color: #333;
+}
+
+/* Container Utama */
+.main-bg {
+  background-color: #f5f5f5; /* Warna background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container Login */
+.login-container {
+  display: flex;
+  flex-direction: row;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  max-width: 900px;
+  width: 100%;
+}
+
+/* Gambar Login */
+.login-image {
+  width: 50%;
+  height: auto;
+  border-radius: 20px 0 0 20px;
+  object-fit: cover;
+}
+
+/* Konten Login */
+.login-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.login-title {
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-form {
+  margin-top: 20px;
+}
+
+.search-result-container {
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.promo-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rectangle {
+  width: 50px;
+  height: 10px;
+  background-color: #6c63ff;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-danger {
+  color: red;
+}
+
+.ProductCard {
+  transition: transform 0.3s ease-in-out;
+}
+
+.ProductCard:hover {
+  transform: scale(1.05);
+}
+
+.ProductCard .card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ProductCard .card-img-top {
+  width: 280px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.ProductCard .card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.ProductCard .card-text {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.ProductCard .price-new {
+  color: red;
+  font-weight: bold;
+}
+
+.ProductCard .price-old {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.ProductCard .rating {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+/* Responsive Menu */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    padding: 10px 0;
+  }
+
+  .navStyle {
+    margin: 5px 0;
+  }
+
+  .d-flex.flex-column {
+    gap: 10px !important;
+  }
+
+  .searchBar {
+    width: 100%;
+  }
+
+  .searchButton {
+    width: 100%;
+  }
+
+  .navIcon {
+    margin: 5px 0;
+  }
+
+  .nav-login {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-img {
+    height: 300px;
+  }
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .login-container {
+    flex-direction: column;
+    text-align: center;
+    border-radius: 20px;
+  }
+
+  .login-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .login-content {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-img {
+    height: 200px;
+  }
+  .product-list {
+    grid-template-columns: 1fr; /* 1 kolom di layar sangat kecil */
+  }
+}

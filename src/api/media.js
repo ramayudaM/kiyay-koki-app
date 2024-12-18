@@ -2,6 +2,8 @@ import axiosClient from './axiosClient';
 
 // Fungsi untuk mendapatkan gambar dari API
 const showImage = async (imageName) => {
+  console.log('shiow', imageName);
+
   try {
     const response = await axiosClient.get(`/assets/image/${imageName}`, {
       responseType: 'blob',

@@ -2,9 +2,6 @@ import axios from 'axios';
 
 const axiosClient = axios.create({
   baseURL: 'http://localhost:4000', // Ganti dengan URL API Anda
-  headers: {
-    'Content-Type': 'application/json',
-  },
 });
 
 // Token Authorization
