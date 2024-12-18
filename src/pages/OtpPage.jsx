@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import mainLogo from '../assets/images/icon/mainLogo1.png';
 import OtpForm from '../components/OtpForm';

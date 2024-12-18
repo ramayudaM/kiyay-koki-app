@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import '../App.css';
 import { Card } from 'react-bootstrap';
-import { FaStar, FaRegStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { FaStar, FaRegStar } from 'react-icons/fa';
 import { showImage } from '../api/media';
 import formatRupiah from '../utils/formatRupiah';
+import '../App.css';
 
 const ProductCard = (props) => {
   const [imageURL, setImageURL] = useState(null);
@@ -28,19 +28,21 @@ const ProductCard = (props) => {
 
   return (
     <Link to={`/product/${props.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-      <div className="ProductCard">
-        <Card style={{ width: '16rem', background: 'none', margin: 'auto' }}>
-          <Card.Img variant="top" src={imageURL || '/default-image.png'} alt="product alt" className="product-card-img" />
+      <div className="product-card">
+        <Card>
+          <div className="product-image-container">
+            <Card.Img variant="top" src={imageURL || '/default-image.png'} alt="product" className="product-card-img" />
+          </div>
           <Card.Body>
-            <Card.Title style={{ fontWeight: '700' }}>{props.nama}</Card.Title>
+            <Card.Title className="product-title">{props.nama}</Card.Title>
             <Card.Text>
-              <span style={{ fontWeight: 'bold', color: 'red' }}>{formatRupiah(props.newPrice)}</span>
+              <span className="product-price">{formatRupiah(props.newPrice)}</span>
               <br />
-              <span style={{ textDecoration: 'line-through', color: 'gray' }}>{formatRupiah(props.oldPrice)}</span>
+              <span className="product-old-price">{formatRupiah(props.oldPrice)}</span>
             </Card.Text>
-            <div className="d-flex">
-              <div>{renderStars(props.star)}</div>
-              <span style={{ color: 'grey', marginLeft: '2px', marginTop: '2px' }}>{props.jumlahUlasan}</span>
+            <div className="product-rating">
+              {renderStars(props.star)}
+              <span className="review-count">({props.jumlahUlasan})</span>
             </div>
           </Card.Body>
         </Card>

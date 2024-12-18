@@ -121,7 +121,7 @@ const DetailProduct = () => {
 
         {/* Action Box */}
         <div>
-          <ProductActionBox />
+          <ProductActionBox productId={product.id} stock={product.stock} />
           <div className="chat-button" style={{ marginTop: '20px', marginLeft: '20px' }}>
             <Button style={{ borderRadius: '0px' }}>CHAT</Button>
           </div>
